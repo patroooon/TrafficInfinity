@@ -15,12 +15,12 @@ namespace ShadowChimera
                 StartCoroutine(MoveCoroutine());
             }
 
-            // Корутина для движения объекта через случайные временные промежутки
+           
             IEnumerator MoveCoroutine()
             {
                 while (true)
                 {
-                    yield return new WaitForSeconds(Random.Range(1, 3)); // Случайное время ожидания от 1 до 3 секунд
+                    yield return new WaitForSeconds(Random.Range(1, 5)); // Случайное время ожидания от 1 до 5 секунд
                     transform.position += direction * speed * Time.deltaTime; // Движение объекта
                 }
             }
