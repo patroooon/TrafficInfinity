@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ShadowChimera
+namespace TrafficInfinity
 {
     public class VanController : MonoBehaviour
     {
