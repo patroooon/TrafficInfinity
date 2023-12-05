@@ -1,6 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 
 namespace TrafficInfinity
 {
@@ -8,11 +9,10 @@ namespace TrafficInfinity
     {
         [SerializeField] private InputActionAsset m_inputActionAsset;
         [SerializeField] private CharacterController m_characterController;
-        [SerializeField] private float m_moveSpeed = 5f;
+        [SerializeField] private float m_speedMove = 5f;
 
         private InputActionMap m_playerMap;
         private InputAction m_moveAction;
-       
 
 
         private void Awake()
@@ -20,17 +20,16 @@ namespace TrafficInfinity
             m_playerMap = m_inputActionAsset.FindActionMap("Player");
             m_moveAction = m_playerMap.FindAction("Move");
         }
+
         private void OnEnable()
         {
             m_playerMap.Enable();
         }
 
-
         private void OnDisable()
         {
-           m_playerMap.Disable();
+            m_playerMap.Disable();
         }
-
 
         private void Update()
         {
@@ -38,9 +37,8 @@ namespace TrafficInfinity
             if (move != Vector2.zero)
             {
                 Vector3 dir = new Vector3(move.x, 0f, move.y);
-                m_characterController.SimpleMove(move * m_moveSpeed);
+                m_characterController.SimpleMove(dir * m_speedMove);
             }
-
         }
     }
 }

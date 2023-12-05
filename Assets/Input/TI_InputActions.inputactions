@@ -1,5 +1,5 @@
 {
-    "name": "TI_InputActions",
+    "name": "DefaultInputActions",
     "maps": [
         {
             "name": "Player",
@@ -31,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "OTM",
-                    "type": "Value",
-                    "id": "f3763ceb-9036-44ec-a6b0-4518732aa881",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -260,17 +251,6 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ddab5721-563e-4608-9da3-8909883993b1",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "OTM",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
